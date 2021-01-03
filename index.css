@@ -1,0 +1,169 @@
+body {
+    background-color: #1D2332;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+}
+
+span, .box h2, .main {
+    color: #4053F5;
+}
+
+a:hover {
+    text-decoration: underline;
+    
+}
+
+.slash {
+    margin-left: 2px;
+    margin-right: 2px;
+    color: white;
+}
+
+img {
+    height: 60px;
+    padding-bottom: 0px;
+}
+
+.triangle {
+    background-image: url("/img/triangle.svg");
+    background-size: cover;
+    position: absolute;
+    width: 472px;
+    height: 472px;
+    left: -180px;
+    z-index: -1;
+}
+
+.adidas {
+    background-image: url("/img/adidas.svg");
+    background-size: cover;
+    position: absolute;
+    width: 444px;
+    height: 398px;
+    z-index: -1;
+    top: 0px;
+    right: -180px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.header h2 {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    cursor: pointer!important;
+}
+
+.box p {
+    max-width: 380px;
+    font-size: 21px;
+}
+
+.box h2 {
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+
+.box {
+    margin: 30px;
+    background-color: #20273A;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    transition: all ease .3s;
+    cursor: pointer;
+}
+
+.box:hover {
+    /* background-color: transparent; */
+    box-shadow: none;
+}
+
+main {
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 120px;
+}
+
+.boxrow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.popup {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .3);
+    /* filter: blur(100px); */
+    z-index: 98;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+
+    display: none;
+
+    backdrop-filter: blur(2px);
+}
+
+.popup-box {
+    background-color: #20273A;
+    padding: 5px 30px;
+    z-index: 99;
+    width: 40vw;
+    color: white;
+    border-radius: 25px ;
+}
+
+.cancel {
+    float: right;
+    width: 25px;
+    padding-top: 20px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.cancel:hover {
+    transform: scale(0.9);
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 70px 0;
+}
+
+.icons img {
+    height: 65px;
+    padding: 0 40px;
+    transition: all ease .2s;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    transform: scale(1.12);
+}
+
+.popup-box h1 {
+    font-size: 40px;
+}

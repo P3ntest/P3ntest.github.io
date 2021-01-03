@@ -1,123 +1,84 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Julius van Voorden</title>
-    <meta name="description" content="Student from germany">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>P3ntest</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
+    <script defer>
+        
+        function popup(open) {
+            const popup = document.getElementById("popup");
+            const mainContent = document.getElementById("main");
+            popup.style.display = open ? "flex" : "none";
+        }
+
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            var isEscape = false;
+            if ("key" in evt) {
+                isEscape = (evt.key === "Escape" || evt.key === "Esc");
+            } else {
+                isEscape = (evt.keyCode === 27);
+            }
+            if (isEscape) {
+                popup(false);
+            }
+        };
+    </script>
+</head>
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-        <div class="container"><a class="navbar-brand logo" href="#">Julius van Voorden</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navbarNav">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="projects-grid-cards.html">Projects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
+    <div class="popup" id="popup">
+        <div class="popup-box">
+            <img src="img/times-solid.svg" alt="" class="cancel" onclick="popup(false)">
+            <h1>Contact</h1>
+            <div class="icons">
+                <img src="img/envelope-solid.svg" alt="">
+                <a href="https://discord.gg/Vty8xCEr4P"><img src="img/discord.svg" alt=""></a>
+                <a href="https://steamcommunity.com/id/p3ntest"><img src="img/steam-brands.svg" alt=""></a>
             </div>
         </div>
-    </nav>
-    <main class="page lanidng-page">
-        <section class="portfolio-block block-intro">
-            <div class="container">
-                <div class="avatar" style="background-image: url(&quot;assets/img/avatars/avatar.jpg&quot;);"></div>
-                <div class="about-me">
-                    <p style="padding: 25px;">Hello! I am Julius van Voorden, a student from germany. I am looking forward to studying information technology. <br>I work on all sorts of things, including front- and back- end development</p><a class="btn btn-outline-primary" role="button"
-                        href="projects-grid-cards.html">View projects</a></div>
-            </div><section style="height: 50px;" class="portfolio-block call-to-action border-bottom"><a style="color: #0ea0ff;" href="https://github.com/P3ntest" class="btn btn-outline-primary" type="button">View Github</a></section></section>
-        <section class="portfolio-block skills">
-            <div class="container">
-                <div class="heading">
-                    <h2 data-aos="flip-down">Special Skills</h2>
+    </div>
+    <div class="main-content" id="main">
+        <div class="triangle"></div>
+        <div class="adidas"></div>
+    
+        <main>
+            <div class="header">
+                <h1>Hi, I'm <span>P3ntest</span></h1>
+                <h2>I am a full stack freelance developer from <br /> germany.</h2>
+                <a class="main" onclick="popup(true)">Contact</a> <span class="slash">/</span> <a href="https://github.com/P3ntest">GitHub</a>
+            </div>
+    
+            <div class="boxrow">
+                <div class="box">
+                    <img src="img/webseite.svg" style="transform: scale(1.3);">
+                    <h2>Websites</h2>
+                    <p>
+                        Custom designs, forum backends, api and dashboards.  
+                    </p>
                 </div>
-                <div class="row">
-                    <div class="col-md-4" data-aos="zoom-out">
-                        <div class="card special-skill-item border-0">
-                            <div class="card-header bg-transparent border-0"><i class="fab fa-java icon"></i></div>
-                            <div class="card-body">
-                                <h3 class="card-title">Java Development</h3>
-                                <p class="card-text">Java was my first major programming language to learn and i have completed dozens of projects with it. I have mastered skills like reflection, networking and writing clean code.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="zoom-out">
-                        <div class="card special-skill-item border-0">
-                            <div class="card-header bg-transparent border-0"><i class="fab fa-git-alt icon"></i></div>
-                            <div class="card-body">
-                                <h3 class="card-title">Collaboration</h3>
-                                <p class="card-text">I have a deep understanding of git and like working together with others to create greater things. I have fun contributing to open source projects, such as Blender and Gimp.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="zoom-out">
-                        <div class="card special-skill-item border-0">
-                            <div class="card-header bg-transparent border-0"><i class="material-icons icon">settings_input_component</i></div>
-                            <div class="card-body">
-                                <h3 class="card-title">Robotics</h3>
-                                <p class="card-text">I enjoy connecting my software with the real world by building robots. I mainly use Raspberry PIs and Arduinos to create stuff, but I still enjoy building something with LEGO Mindstorms.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="box">
+                    <img src="img/discord.svg" alt="">
+                    <h2>Discord Bots</h2>
+                    <p>
+                        I make professional Discord Bots with Javascript.
+                    </p>
                 </div>
-            </div><div class="skills portfolio-info-card">
-    <h2>Skills</h2>
-    <h3>JavaScript  / TypeScript</h3>
-    <div class="progress" style="opacity: 1;">
-        <div class="progress-bar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="sr-only">100%</span></div>
+                <div class="box">
+                    <img src="img/extension.svg" alt="">
+                    <h2>Minecraft Plugins</h2>
+                    <p>
+                        I make customisable professional plugins for Minecraft.
+                    </p>
+                </div>
+            </div>
+    
+        </main>
     </div>
-    <h3>Java</h3>
-    <div class="progress">
-        <div class="progress-bar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="sr-only">100%</span></div>
-    </div>
-    <h3>Python</h3>
-        <div class="progress">
-        <div class="progress-bar" aria-valuenow="80" saria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="sr-only">80%</span></div>
-    </div>
-    <h3>HTML / CSS</h3>
-    <div class="progress">
-        <div class="progress-bar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="sr-only">80%</span></div>
-    </div>
-        <h3>SQL</h3>
-    <div class="progress">
-        <div class="progress-bar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="sr-only">80%</span></div>
-    </div>
-        <h3>PHP</h3>
-    <div class="progress">
-        <div class="progress-bar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">80%</span></div>
-    </div>
-            <h3>C#</h3>
-    <div class="progress">
-        <div class="progress-bar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"><span class="sr-only">80%</span></div>
-    </div>
-                <h3>C / C++</h3>
-    <div class="progress">
-        <div class="progress-bar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"><span class="sr-only">80%</span></div>
-    </div>
-</div></section>
-    </main>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="links"><a href="index.html">About me</a><a href="contact.html">Contact me</a><a href="projects-grid-cards.html">Projects</a></div>
-            <div class="social-icons"><a href="https://twitter.com/JuliusVoorden"><i class="icon ion-social-twitter"></i></a><a href="https://github.com/P3ntest"><i class="fab fa-github-alt"></i></a></div>
-        </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
+    
 </body>
-
 </html>
